@@ -7,7 +7,7 @@ class MODQDATATRANSFER_OT_MOD_data_transfer(bpy.types.Operator):
     
     @classmethod
     def poll(cls, context):
-        return context.active_object and len(bpy.context.selected_objects)
+        return context.active_object and len(bpy.context.selected_objects) > 1
         # return context.area.type == 'VIEW_3D' and context.active_object and len(bpy.context.selected_objects)>1
     
     def execute(self, context):
@@ -22,8 +22,7 @@ class MODQDATATRANSFER_OT_MOD_data_transfer(bpy.types.Operator):
         def get_selection():
             active_object = bpy.context.active_object
             selected_objects = bpy.context.selected_objects.copy()
-            selected_objects.pop(0) # remove active object
-            # selected_objects.remove(active_object)
+            selected_objects.remove(active_object)
             return active_object, selected_objects
 
         def apply_modifier_to_selected(selection, target):

@@ -3,7 +3,7 @@ bl_info = {
     "author": "sereda",
     "version": (0, 0, 1),
     "blender": (4, 1, 0),
-    "location": "",
+    "location": "Object mode Context menu.",
     "description": "",
     "warning": "",
     "doc_url": "",
