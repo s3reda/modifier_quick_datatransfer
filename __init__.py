@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Modifier Quick Data Transfer",
     "author": "sereda",
-    "version": (0, 0, 1),
+    "version": (0, 0, 2),
     "blender": (4, 1, 0),
     "location": "Object mode Context menu.",
     "description": "",
